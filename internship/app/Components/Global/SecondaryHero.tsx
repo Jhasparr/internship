@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
 import HeroCard from "./HeroCard";
-import { title } from "process";
 
 type CardProps = {
   title: string;
@@ -15,55 +14,55 @@ const mainCard: CardProps[] = [
     title: "Image",
     description: "Generate images with custom styles in Flux and ideogram.",
     isNew: true,
-    image: "hero1.jpg",
+    image: "/hero1.jpg",
   },
   {
     title: "Video",
     description: "Generate videos with Haliua, Pica, Runway, Luma and More.",
     isNew: false,
-    image: "hero2.jpg",
+    image: "/hero2.jpg",
 
   },
    {
     title: "Realtime",
     description: "Realtime AI rendering on a canvass instant feedback loops.",
     isNew: false,
-    image: "hero3.jpg",
+    image: "/hero3.jpg",
 
   },
    {
     title: "Enhancer",
     description: "Upscale and Enhance Images and videos up to 22K.",
     isNew: true,
-    image: "hero4.jpg",
+    image: "/hero4.jpg",
 
   },
    {
     title: "Edit",
     description: "Add objects, change style, or expand photos and generations",
     isNew: true,
-    image: "hero5.jpg",
+    image: "/hero5.jpg",
 
   },
    {
     title: "Video Lipsync",
     description: "Lip Sync any video to any audio",
     isNew: true,
-    image: "hero6.jpg",
+    image: "/hero6.jpg",
 
   },
    {
     title: "Motion Transfer",
     description: "Transfer motion to images and animate characters",
     isNew: true,
-    image: "hero7.jpg",
+    image: "/hero7.jpg",
 
   },
    {
     title: "Train",
     description: "Teach Krea to replicate your style, products or characters",
     isNew: false,
-    image: "hero8.jpg",
+    image: "/hero8.jpg",
 
   },
 ]

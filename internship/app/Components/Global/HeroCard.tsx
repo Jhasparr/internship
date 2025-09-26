@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 type CardProps = {
   title: string;
   description: string;
@@ -11,8 +12,8 @@ type CardProps = {
 export default function HeroCard({title, description, isNew = false, image = "bg-red-400" }: CardProps) {
   return (
      <div className="flex flex-row space-x-2 hover:bg-gray-50 dark:active:bg-[#212121]  dark:hover:bg-[#212121] px-4 py-3 rounded-2xl  ">
-          <div className="shadow-md md:w-15 w-13 h-13 md:h-15 rounded-lg">
-            <img src={image} alt={title} className='w-full h-full object-cover rounded-lg' />
+          <div className="shadow-md md:w-15 w-13 h-13 md:h-15 rounded-lg relative">
+            <Image src={image} alt={title} fill className=' object-cover rounded-lg' />
           </div>
           <div className="">
             <div className="flex flex-row space-x-2 items-center mb-0 ">

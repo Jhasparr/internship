@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import HeroCard from "./HeroCard";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import LeftArrowIcon, {
   CallIcon,
@@ -8,7 +8,6 @@ import LeftArrowIcon, {
   FileIcon,
   GalleryIcon,
   HomeIcon,
-  ImageIcon,
   LocationIcon,
   SparkIcon,
   VideoIcon,
@@ -20,6 +19,7 @@ import LeftArrowIcon, {
 } from "./LeftIcon";
 import NavIcons from "./NavIcons";
 import useDarkMode from "./Darkmode";
+import Link from "next/link";
 
 type CardProps = {
   title: string;
@@ -30,55 +30,55 @@ type CardProps = {
 const subCard: CardProps[] = [
   {
     title: "Account",
-    image: "hero10.jpg",
+    image: "/hero10.jpg",
   },
   {
     title: "Setttings",
     isNew: true,
-    image: "hero8.jpg",
+    image: "/hero8.jpg",
   },
 ];
 const mainCard: CardProps[] = [
   {
     title: "Image",
     isNew: true,
-    image: "hero1.jpg",
+    image: "/hero1.jpg",
   },
   {
     title: "Video",
     isNew: true,
 
-    image: "hero2.jpg",
+    image: "/hero2.jpg",
   },
   {
     title: "Realtime",
     isNew: true,
-    image: "hero3.jpg",
+    image: "/hero3.jpg",
   },
   {
     title: "Enhancer",
     isNew: true,
-    image: "hero4.jpg",
+    image: "/hero4.jpg",
   },
   {
     title: "Edit",
     isNew: true,
-    image: "hero5.jpg",
+    image: "/hero5.jpg",
   },
   {
     title: "Video ",
     isNew: true,
-    image: "hero6.jpg",
+    image: "/hero6.jpg",
   },
   {
     title: "Motion ",
     isNew: true,
-    image: "hero7.jpg",
+    image: "/hero7.jpg",
   },
   {
     title: "Train",
     isNew: true,
-    image: "hero8.jpg",
+    image: "/hero8.jpg",
   },
 ];
 
@@ -105,15 +105,15 @@ export default function Navbar() {
       <div className="relative lg:w-full lg:max-w-full min-w-0 lg:flex-shrink  mx-auto px-4 py-0 lg:flex items-center justify-between space-x-10  ">
         <div className="hidden lg:flex justify-between space-x-10 ">
           <div className="lg:flex  space-x-10 ">
-            <a href={"/"}>
-              <img
-                src={"logo.png"}
+            <Link href={"/"}>
+              <Image
+                src={"/logo.png"}
                 alt="SureBloom"
                 width={35}
                 height={30}
                 className="dark:invert"
               />
-            </a>
+            </Link>
             <div className="flex justify-center space-x-4 ">
               <div className="hidden lg:flex hover:bg-gray-50 hover:shadow-md transition-all space-x-1 z-50 shadow-md rounded-full w-9 px-2 py-1 bg-gradient-to-r from-sky-300 via-pink-400  to-teal-400"></div>
               <div className="hidden xl:flex items-center justify-center font-medium dark:text-amber-300">
@@ -125,39 +125,39 @@ export default function Navbar() {
 
         <nav className="hidden lg:flex space-x-1 z-50 bg-gray-100 shadow-md rounded-xl px-1 py-1 dark:bg-[#212121] mx-auto">
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373] hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <HomeIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373]  hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <GalleryIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373]  hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <VideoIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373]  hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <SparkIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373]  hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <EditIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373]  hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <LocationIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
           <div className="hover:bg-gray-50 dark:hover:bg-[#737373]  hover:shadow-md transition-all px-4 py-3 rounded-xl">
-            <a href="/">
+            <Link href="/">
               <FileIcon className="dark:text-white" />
-            </a>
+            </Link>
           </div>
         </nav>
         <div className="hidden lg:flex justify-center space-x-4 ">
@@ -228,9 +228,11 @@ export default function Navbar() {
                     <div className="flex flex-row w-full  ">
                       <div className=" flex flex-row shadow-md gap-2 w-9 h-9 rounded-lg ">
                         
-                        <img
-                          src={"logo.png"}
+                        <Image
+                          src={"/logo.png"}
                           alt={"Logo"}
+                          width={35}
+                height={30}
                           className="w-full h-full dark:invert object-cover rounded-lg"
                         />
                         <div className=" justify-center items-center flex ">
