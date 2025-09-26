@@ -71,7 +71,7 @@ export default function Carousel() {
             <div className="absolute mb-3 md:mb-8 text-white drop-shadow-md bottom-1 left-5">
               <h3 className="text-[10px] font-bold md:text-3xl">FLUX.1 Krea</h3>
               <p className=" text-[6px] md:text-[14px] md:w-40 w-38 ">
-                We're making the weighs to our FLUX.1 Krea Model open-source.
+                We&pos;re making the weighs to our FLUX.1 Krea Model open-source.
                 Download and run our model weights, read the technical report,
                 or generate it with Krea Image
               </p>
